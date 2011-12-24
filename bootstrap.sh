@@ -27,6 +27,7 @@ echo "init emacs ...."
 
 echo "init git ...."
 link gitconfig
+link gitignore
 
 echo "init zsh ...."
 link zshrc

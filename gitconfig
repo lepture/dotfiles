@@ -1,10 +1,21 @@
 [user]
     name = lepture
     email = lepture@me.com
+
 [core]
     editor = vim
+    excludesfile = ~/.gitignore
+    quotepath = false
+
 [merge]
     tool = vimdiff
+
+[diff]
+    tool = vimdiff
+
+[difftool]
+    prompt = false
+
 [alias]
     st = status
     ci = commit -a
@@ -17,5 +28,6 @@
     lg = log --graph --pretty='format:%Cblue%an%Creset commit at %Cgreen%ar%Creset: \n %Cred%h%Creset %C(yellow)%d%Creset %s\n'
     graphviz = "!f() { echo 'digraph git {' ; git log --pretty='format:  %h -> { %p }' \"$@\" | sed 's/[0-9a-f][0-9a-f]*/\"&\"/g' ; echo '}'; }; f"
     lc = "! git log --pretty=oneline|wc -l"
+
 [color]
     ui = true

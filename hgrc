@@ -1,0 +1,10 @@
+[ui]
+username = Hsiaoming Young <lepture@me.com>
+verbose = True
+
+[alias]
+latest = log --limit 5
+
+[extensions]
+
+[hooks]

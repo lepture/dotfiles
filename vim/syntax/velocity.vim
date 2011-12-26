@@ -22,14 +22,15 @@ else
   unlet b:current_syntax
 endif
 
-syn keyword velocityTodo  FIXME TODO
-syn region velocityComment start="#\*" end="\*#" contains=velocityTodo
-syn region velocityComment start="##" end="" oneline contains=velocityTodo
+syn keyword velocityTodo FIXME TODO contained
+syn region velocitySpec start="@" end=":" oneline contained
+syn region velocityComment start="#\*" end="\*#" contains=velocityTodo,velocitySpec
+syn match velocityComment /##.*/ contains=velocityTodo,velocitySpec
 syn region velocityString start='"' end='"' oneline
 syn region velocityList start='\[' end='\]' oneline contained contains=velocityString
 syn match velocityMath /=\|-\|+\|\/\|\*\|%/ contained
-syn match velocityBlock /#[a-z]\{2,9\}/ contains=velocityStatement
-syn match velocityBlock /#[a-z]\{2,9\}([^)]\+)/ contains=velocityStatement,velocityVar,velocityString,velocityMath,velocityList,velocityFunction
+syn match velocityBlock /#[a-z]\{2,\}/ contains=velocityStatement
+syn match velocityBlock /#[a-z]\{2,\}([^)]\+)/ contains=velocityStatement,velocityVar,velocityString,velocityMath,velocityList,velocityFunction
 syn keyword velocityStatement in set if else elseif end foreach include parse macro cmsparse stop break evaluate define contained
 
 syn match velocityVar /$!\?[a-zA-Z][a-zA-Z0-9_-]\+\.\?[a-zA-Z0-9]*/ contains=velocityFunction
@@ -50,6 +51,7 @@ if version >= 508 || !exists("did_velocity_syn_inits")
   HiLink velocityString String
   HiLink velocityList Constant
   HiLink velocityBlock PreProc
+  HiLink velocitySpec Special
   HiLink velocityVar Identifier
   HiLink velocityFunction Function
   HiLink velocityStatement Statement

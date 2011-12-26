@@ -22,7 +22,7 @@ syn region cssString start="'" end="'" contained
 " HTML4 tags
 syn keyword cssTagName abbr acronym address applet area base a b
 syn keyword cssTagName basefont bdo big blockquote body button br
-syn keyword cssTagName caption center cite code col colgroup dd del
+syn keyword cssTagName caption cite code col colgroup dd del
 syn keyword cssTagName dfn dir div dl dt em fieldset form frame
 syn keyword cssTagName frameset h1 h2 h3 h4 h5 h6 head hr html img i
 syn keyword cssTagName iframe img input ins isindex kbd label legend li
@@ -32,6 +32,7 @@ syn keyword cssTagName span strike strong style sub sup tbody td
 syn keyword cssTagName textarea tfoot th thead title tr tt ul u var
 syn match cssTagName "\*"
 syn match cssTagName /\<table\>/
+syn match cssTagName /\<center\>/
 " HTML5 tags
 syn keyword cssTagName article aside audio bb canvas command datagrid
 syn keyword cssTagName datalist details dialog embed figure footer figcaption

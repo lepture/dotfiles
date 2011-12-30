@@ -31,6 +31,7 @@ link gitignore
 
 echo "init zsh ...."
 link zshrc
+link pystartup.py
 
 if [ ! -d ~/.oh-my-zsh ]; then
     git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh

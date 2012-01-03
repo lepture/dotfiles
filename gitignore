@@ -1,10 +1,28 @@
+#################
+# Common ignore #
+#################
+build
+# Test DB
+*.sqlite
+# Test
+test.*
+.hg
+.svn
+CVS
+*~.nib
+*.swp
+*~
+
+
+#################
+# python ignore #
+#################
 *.py[co]
 
 # Packages
 *.egg
 *.egg-info
 dist
-build
 eggs
 parts
 bin
@@ -26,10 +44,20 @@ pip-log.txt
 # Mr Developer
 .mr.developer.cfg
 
-# Test DB
-*.sqlite
-# Test
-test.*
 
-# Mac
+##############
+# Mac ignore #
+##############
 .DS_Store
+*.mode1
+*.mode1v3
+*.mode2v3
+*.perspective
+*.perspectivev3
+*.pbxuser
+xcuserdata
+*.[oa]
+*(Autosaved).rtfd/
+Backup[ ]of[ ]*.pages/
+Backup[ ]of[ ]*.key/
+Backup[ ]of[ ]*.numbers/

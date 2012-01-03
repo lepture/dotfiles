@@ -59,7 +59,7 @@ export HISTFILE="$HOME/.zsh/zhistory$PWD/zhistory"
 #path alias{{{
 #cd ~work  to
 hash -d work="$HOME/workspace/"
-hash -d env="$HOME/Documents/virtualenv/"
+hash -d env="$HOME/.virtualenv/"
 #}}}
 setopt complete_in_word
 #auto completion options

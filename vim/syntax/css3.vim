@@ -27,11 +27,12 @@ syn keyword cssTagName dfn dir div dl dt em fieldset form frame
 syn keyword cssTagName frameset h1 h2 h3 h4 h5 h6 head hr html img i
 syn keyword cssTagName iframe img input ins isindex kbd label legend li
 syn keyword cssTagName link map menu meta noframes noscript ol optgroup
-syn keyword cssTagName option p param pre q s samp script select small
+syn keyword cssTagName option p param pre q s samp script select
 syn keyword cssTagName span strike strong style sub sup tbody td
 syn keyword cssTagName textarea tfoot th thead title tr tt ul u var
 syn match cssTagName "\*"
 syn match cssTagName /\<table\>/
+syn match cssTagName /\<small\>/
 syn match cssTagName /\<center\>/
 " HTML5 tags
 syn keyword cssTagName article aside audio bb canvas command datagrid
@@ -71,6 +72,7 @@ syn match cssBackgroundProp /object-\(fit\|position\)/ contained
 " http://www.evotech.net/blog/2010/02/css3-properties-values-browser-support/
 syn keyword cssBackgroundVal tb lr rl snap cover contain widthLength heightLength contained
 syn match cssBackgroundVal /\(scale-down\|from-image\)/ contained
+syn match cssBackgroundVal /repeat-[xy]/ contained
 syn keyword cssBackgroundVal circle ellipse to at contained
 syn match cssBackgroundVal /\(closest\|farthest\)-\(side\|corner\)/ contained
 
@@ -126,8 +128,9 @@ syn keyword cssColorVal papayawhip peachpuff peru pink plum powderblue purple co
 syn keyword cssColorVal red rosybrown royalblue saddlebrown salmon sandybrown contained
 syn keyword cssColorVal seagreen seashell sienna silver skyblue slateblue contained
 syn keyword cssColorVal slategray slategrey snow springgreen steelblue tan contained
-syn keyword cssColorVal teal thistle tomato turquoise violet wheat white contained
+syn keyword cssColorVal teal thistle tomato turquoise violet wheat contained
 syn keyword cssColorVal whitesmoke yellow yellowgreen contained
+syn match cssColorVal /<white>/ contained
 syn keyword cssColorProp color opaticy contained
 syn match cssColorProp /color-profile/ contained
 
@@ -140,7 +143,7 @@ syn match cssBoxProp /\(outline-\(color\|offset\|style\|width\)\|outline\)/ cont
 syn keyword cssBoxProp width height contained
 
 " Text
-syn match cssTextProp /text-\(align-last\|align\|decoration\|emphasis\|height\|indent\|justify\|outline\|shadow\|transform\|wrap\)/ contained
+syn match cssTextProp /text-\(align-last\|align\|decoration\|emphasis\|height\|indent\|justify\|outline\|shadow\|transform\|wrap\|overflow\)/ contained
 syn match cssTextProp /\(line-stacking-\(ruby\|shift\|strategy\)\|line-stacking\|line-height\)/ contained
 syn match cssTextProp /vertical-align/ contained
 syn match cssTextProp /letter-spacing/ contained
@@ -149,6 +152,9 @@ syn match cssTextProp /word-\(break\|spacing\|wrap\)/ contained
 syn match cssTextProp "\<word-wrap\>" contained
 syn match cssTextVal "\<break-word\>" contained
 syn match cssTextVal "\<break-all\>" contained
+syn match cssTextVal "\<line-through\>" contained
+syn match cssTextVal /text-\(top\|bottom\)/ contained
+syn keyword cssTextVal uppercase lowercase ellipsis middle contained
 
 " List
 syn match cssListProp /\(list-style-\(type\|image\|position\)\|list-style\)/ contained
@@ -162,6 +168,7 @@ syn match cssListVal /lower-greek/ contained
 " Visual formatting
 syn keyword cssVisualProp display position top right bottom left float clear clip contained
 syn keyword cssVisualProp zoom visibility cursor direction outline resize contained
+syn keyword cssVisualProp opacity contained
 syn match cssVisualProp /z-index/ contained
 syn match cssVisualProp /\(overflow-\(style\|[xy]\)\|overflow\)/ contained
 syn keyword cssVisualVal inline block compact contained

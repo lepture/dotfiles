@@ -46,7 +46,9 @@ let MRU_Include_Files='\.py$\|\.html$\|\.css$\|\.js$\|\.rst$'
 let MRU_Auto_Close=1
 let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
+let g:html_indent_style1 = "inc"
 "set noswapfile
+let g:pep8_cmd=$HOME . "/.virtualenv/lint/bin/pep8"
 
 " tabs
 retab

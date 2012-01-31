@@ -15,12 +15,14 @@ if !exists("g:pep8_args")
     let g:pep8_args = ""
 endif
 
-let s:pep8_cmd="pep8"
+if !exists("g:pep8_cmd")
+  let g:pep8_cmd="pep8"
+endif
 
 if !exists("*Pep8()")
     function Pep8()
-        if !executable(s:pep8_cmd)
-            echoerr "File " . s:pep8_cmd . " not found. Please install it first."
+        if !executable(g:pep8_cmd)
+            echoerr "File " . g:pep8_cmd . " not found. Please install it first."
             return
         endif
 
@@ -38,7 +40,7 @@ if !exists("*Pep8()")
 
         " perform the grep itself
         let &grepformat="%f:%l:%c: %m"
-        let &grepprg=s:pep8_cmd . " --repeat " . g:pep8_args
+        let &grepprg=g:pep8_cmd . " --repeat " . g:pep8_args
         silent! grep! %
 
         " restore grep settings

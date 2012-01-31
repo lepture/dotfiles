@@ -1,8 +1,11 @@
 " System
+filetype off
+call pathogen#infect()
+call pathogen#helptags()
 set nocompatible
 set backspace=indent,eol,start
-set nobackup 
-set history=50	
+set nobackup
+set history=50
 set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=utf-8,cp936,gbk
@@ -14,6 +17,8 @@ set ruler
 set showcmd
 set incsearch
 set ignorecase
+set smartcase
+set gdefault
 set smarttab
 set expandtab
 set listchars=tab:>-
@@ -31,8 +36,15 @@ set cursorline
 "set cursorcolumn
 set autoread
 set wildmenu
+set ttyfast
+"set relativenumber
+"set undofile
 set wildignore+=*.pyc
 "set completeopt=preview
+set list
+set listchars=tab:▸\ ,eol:¬
+
+"configurations
 set directory=$HOME/.hide
 let g:netrw_home=$HOME . '/.hide'
 let g:netrw_list_hide='.*\.swp$,.*\.pyc$,.*~'
@@ -54,8 +66,8 @@ let g:pep8_cmd=$HOME . "/.virtualenv/lint/bin/pep8"
 retab
 set tabpagemax=7
 set showtabline=2
-nmap <C-n> :tabnext<cr>
-nmap <C-p> :tabprevious<cr>
+nmap <c-n> :tabnext<cr>
+nmap <c-p> :tabprevious<cr>
 nmap tn :tabnew .<cr>
 nmap tc :tabclose<cr>
 nmap <tab> :NERDTreeToggle<cr>
@@ -74,9 +86,12 @@ autocmd FileType css setlocal syntax=css3
 au BufRead,BufNewFile *.vm set ft=html fileencoding=gbk syntax=velocity
 au BufRead,BufNewFile *.j2 set ft=htmldjango
 
+"map keys
+let mapleader = ","
 inoremap <C-U> <C-G>u<C-U>
-
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
+nnoremap ; :
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
 "gui setting
 if has("gui_running")
@@ -84,6 +99,7 @@ if has("gui_running")
   set guifont=Monaco
   winsize 100 60
   set cursorcolumn
+  set hidden
   colorscheme slate3
 endif
 

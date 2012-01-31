@@ -50,6 +50,7 @@ let g:netrw_home=$HOME . '/.hide'
 let g:netrw_list_hide='.*\.swp$,.*\.pyc$,.*~'
 let NERDTreeBookmarksFile=$HOME . '/.hide/bookmarks'
 let NERDTreeShowBookmarks=1
+let NERDTreeChDirMode=2
 "let NERDTreeHijackNetrw=0
 "let g:netrw_altv=1
 "let g:netrw_browse_split=4
@@ -101,6 +102,12 @@ if has("gui_running")
   set cursorcolumn
   set hidden
   colorscheme slate3
+endif
+if has("gui_macvim")
+  "let macvim_skip_cmd_opt_movement=1
+  menu disable &File.&Print
+  map <D-p> <Plug>PeepOpen
+  menu File.PeepOpen <Plug>PeepOpen
 endif
 
 if &t_Co > 255

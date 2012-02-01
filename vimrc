@@ -21,7 +21,6 @@ set smartcase
 set gdefault
 set smarttab
 set expandtab
-set listchars=tab:>-
 set shiftwidth=4
 set tabstop=4
 "set shiftround
@@ -37,12 +36,26 @@ set cursorline
 set autoread
 set wildmenu
 set ttyfast
+set dictionary=/usr/share/dict/words
 "set relativenumber
 "set undofile
+set wildignore+=.hg,.git,.svn
+set wildignore+=*.aux,*.out,*.toc
+set wildignore+=*.jpg,*.bmp,*.gif,*.png,*.jpeg
+set wildignore+=*.o,*.obj,*.exe,*.dll,*.manifest
+set wildignore+=*.sw?
+set wildignore+=*.DS_Store
 set wildignore+=*.pyc
+set wildignore+=*.egg,*.egg-info
+set wildignore+=*.orig
 "set completeopt=preview
 set list
-set listchars=tab:▸\ ,eol:¬
+set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮
+
+set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %y,%P
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 
 "configurations
 set directory=$HOME/.hide
@@ -64,7 +77,7 @@ let g:html_indent_style1 = "inc"
 let g:pep8_cmd=$HOME . "/.virtualenv/lint/bin/pep8"
 let g:syntastic_python_checker=$HOME . "/.virtualenv/lint/bin/flake8"
 let g:syntastic_check_on_open=1
-let g:syntastic_auto_loc_list=1
+"let g:syntastic_auto_loc_list=1
 
 
 " tabs

@@ -33,6 +33,30 @@ echo "init zsh ...."
 link zshrc
 link pystartup.py
 
+echo "init python env ..."
+if which pip > /dev/null; then
+    echo "pip already installed"
+else
+    sudo easy_install pip
+fi
+if which virtualenv > /dev/null; then
+    echo "virtualenv already installed"
+else
+    sudo pip install virtualenv
+fi
+if [ ! -d $HOME/.virtualenv ]; then
+    echo "create virualenv directory"
+    mkdir "$HOME/.virtualenv"
+    virtualenv $HOME/.virtualenv/lint --no-site-packages
+    source $HOME/.virtualenv/lint/bin/active
+    pip install flake8
+    deactive
+fi
+if [ ! -d $HOME/workspace ]; then
+    echo "create workspace"
+    mkdir "$HOME/workspace"
+fi
+
 if [ ! -d ~/.oh-my-zsh ]; then
     git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 fi

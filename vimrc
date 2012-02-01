@@ -62,6 +62,10 @@ let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
 "set noswapfile
 let g:pep8_cmd=$HOME . "/.virtualenv/lint/bin/pep8"
+let g:syntastic_python_checker=$HOME . "/.virtualenv/lint/bin/flake8"
+let g:syntastic_check_on_open=1
+let g:syntastic_auto_loc_list=1
+
 
 " tabs
 retab

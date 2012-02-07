@@ -77,6 +77,7 @@ let g:html_indent_style1 = "inc"
 let g:pep8_cmd=$HOME . "/.virtualenv/lint/bin/pep8"
 let g:syntastic_python_checker=$HOME . "/.virtualenv/lint/bin/flake8"
 let g:syntastic_check_on_open=1
+let loaded_html_syntax_checker = 0
 "let g:syntastic_auto_loc_list=1
 
 
@@ -95,6 +96,7 @@ syntax on
 
 "filetype plugin on
 filetype plugin indent on
+au BufRead,BufNewFile *.less set ft=css
 autocmd FileType text setlocal textwidth=80
 autocmd FileType python setlocal textwidth=79
 autocmd FileType vim setlocal shiftwidth=2 tabstop=2
@@ -125,6 +127,8 @@ if has("gui_macvim")
   menu disable &File.&Print
   map <D-p> <Plug>PeepOpen
   menu File.PeepOpen <Plug>PeepOpen
+  map <D-[> :tabprevious<cr>
+  map <D-]> :tabnext<cr>
 endif
 
 if &t_Co > 255

@@ -29,6 +29,10 @@ echo "init git ...."
 link gitconfig
 link gitignore
 
+echo "init hg"
+link hgrc
+link hg-prompt.py
+
 echo "init zsh ...."
 link zshrc
 link pystartup.py

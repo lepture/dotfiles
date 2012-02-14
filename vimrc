@@ -124,13 +124,12 @@ if has("gui_running")
 endif
 if has("gui_macvim")
   "let macvim_skip_cmd_opt_movement=1
-  menu disable &File.&Print
+  "menu disable &File.&Print
+  unmenu &File.&Print
   map <D-p> <Plug>PeepOpen
   menu File.PeepOpen <Plug>PeepOpen
   map <D-[> :tabprevious<cr>
   map <D-]> :tabnext<cr>
 endif
 
-if &t_Co > 255
-  colorscheme slate3
-endif
+colorscheme slate3

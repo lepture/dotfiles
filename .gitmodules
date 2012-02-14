@@ -16,12 +16,6 @@
 [submodule "vim/bundle/supertab"]
 	path = vim/bundle/supertab
 	url = git://github.com/ervandew/supertab.git
-[submodule "vim/bundle/html5"]
-	path = vim/bundle/html5
-	url = git://github.com/othree/html5.vim.git
-[submodule "vim/bundle/vim-rooter"]
-	path = vim/bundle/vim-rooter
-	url = git://github.com/airblade/vim-rooter.git
 [submodule "vim/bundle/velocity"]
 	path = vim/bundle/velocity
 	url = git@github.com:lepture/vim-velocity.git

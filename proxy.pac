@@ -1,5 +1,6 @@
-var proxy = 'SOCKS5 127.0.0.1:7070';
-var urls = [
+proxy = 'SOCKS5 127.0.0.1:7070; DIRECT';
+urls = [
+    '*twitter.com*'
 ]
 hosts = [
     'twitter.com'
@@ -7,16 +8,17 @@ hosts = [
     ,'twimg.com'
     ,'.twimg.com'
     ,'t.co'
+    ,'twitpic.com'
     ,'vimeo.com'
     ,'.vimeo.com'
     ,'.appspot.com'
     ,'.wordpress.com'
+    ,'cl.ly'
+    ,'.pandora.com'
+    ,'img.ly'
 ]
-function regExpMatch(url, pattern) {
-    try { return new RegExp(pattern).test(url); } catch(ex) { return false; }
-}
 function FindProxyForURL(url, host) {
-    if (isPlainHostName(host)) return "DIRECT";
+    if (isPlainHostName(host)) return 'DIRECT';
     for (i=0; i < urls.length; i++) {
         if (shExpMatch(url, urls[i])) return proxy;
     }

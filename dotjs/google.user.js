@@ -2,7 +2,10 @@
 // @name          Google HTTPS
 // @namespace     http://lepture.com/project/js-google
 // @description   Always use https on google. Fix search results links.
-// @include       http://*.google.com/*
+// @include       http://www.google.com/*
+// @include       http://code.google.com/*
+// @include       http://reader.google.com/*
+// @include       http://maps.google.com/*
 // @include       http://www.google.com.hk/*
 // @include       https://www.google.com/*
 // ==/UserScript==

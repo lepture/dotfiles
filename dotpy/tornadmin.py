@@ -126,19 +126,24 @@ makefile_tpl = """server:
 \t%s/app.py --config=tmp.config
 
 less:
-\tif [ ! -d static/css ]; then mkdir static/css; fi
+\tif [ ! -d static/css ]; then mkdir -p static/css; fi
 \tlessc --compress assets/less/site.less > static/css/site.css
 
 compilejs:
-\tif [ ! -d static/js ]; then mkdir static/js; fi
+\tif [ ! -d static/js ]; then mkdir -p static/js; fi
 \tuglifyjs -nc assets/js/lib/jquery.js > static/js/lib.js
 \tuglifyjs -nc assets/js/app.js >> static/js/lib.js
 
 copystatic:
-\tif [ ! -d static/js ]; then mkdir static/js; fi
-\tif [ ! -d static/img ]; then mkdir static/img; fi
+\tif [ ! -d static/js ]; then mkdir -p static/js; fi
+\tif [ ! -d static/img ]; then mkdir -p static/img; fi
 \tcp -r assets/js/* static/js/
 \tcp -r assets/img/* static/img/
+
+clean:
+\trm -fr build
+\trm -fr dist
+\trm -fr *.egg-info
 """
 
 
@@ -147,6 +152,7 @@ def create_project(name):
 
     project/
         Makefile
+        setup.py
         assets/
         project/
             __init__.py

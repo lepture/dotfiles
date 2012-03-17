@@ -12,10 +12,12 @@ hosts = [
     ,'vimeo.com'
     ,'.vimeo.com'
     ,'.appspot.com'
+    ,'.blogspot.com'
     ,'.wordpress.com'
     ,'cl.ly'
     ,'.pandora.com'
     ,'img.ly'
+    ,'.facebook.com'
 ]
 function FindProxyForURL(url, host) {
     if (isPlainHostName(host)) return 'DIRECT';

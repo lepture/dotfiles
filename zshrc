@@ -146,6 +146,7 @@ my_accounts=(
 zstyle ':completion:*:my-accounts' users-hosts $my_accounts
 #}}}
 
+export LANG='en_US.UTF-8'
 export PYTHONSTARTUP=$HOME/.pystartup.py
 #export EPREFIX="$HOME/Gentoo"
 #export PATH="$EPREFIX/usr/bin:$EPREFIX/bin:$EPREFIX/tmp/usr/bin:$EPREFIX/tmp/bin:/usr/local/sbin:$PATH"

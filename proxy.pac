@@ -13,10 +13,12 @@ hosts = [
     ,'.vimeo.com'
     ,'.appspot.com'
     ,'.blogspot.com'
+    ,'wordpress.com'
     ,'.wordpress.com'
     ,'cl.ly'
     ,'.pandora.com'
     ,'img.ly'
+    ,'j.mp'
     ,'.facebook.com'
 ]
 function FindProxyForURL(url, host) {

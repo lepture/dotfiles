@@ -20,6 +20,7 @@ hosts = [
     ,'img.ly'
     ,'j.mp'
     ,'.facebook.com'
+    ,'.quora.com'
 ]
 function FindProxyForURL(url, host) {
     if (isPlainHostName(host)) return 'DIRECT';

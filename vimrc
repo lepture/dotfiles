@@ -1,8 +1,22 @@
 " System
-filetype off
-call pathogen#infect()
-call pathogen#helptags()
 set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'gmarik/vundle'
+
+"My bundles
+Bundle "tpope/vim-fugitive"
+Bundle "scrooloose/nerdtree"
+Bundle "scrooloose/nerdcommenter"
+Bundle "tpope/vim-surround"
+Bundle "pangloss/vim-javascript"
+Bundle "ervandew/supertab"
+Bundle "lepture/vim-velocity"
+Bundle "scrooloose/syntastic"
+Bundle "mattn/zencoding-vim"
+Bundle "msanders/snipmate"
+
 set backspace=indent,eol,start
 set nobackup
 set history=50

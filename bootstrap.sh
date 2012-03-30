@@ -19,8 +19,12 @@ if [ ! -d $HOME/.hide ]; then
 fi
 
 echo "init vim ...."
+if [ ! -d vim/bundle/vundle ]; then
+    git clone https://github.com/gmarik/vundle.git vim/bundle/vundle
+fi
 link vim
 link vimrc
+vim +BundleInstall +qall
 
 echo "init emacs ...."
 #link emacs.d

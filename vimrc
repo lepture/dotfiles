@@ -5,7 +5,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
 
-"My bundles
+"Github bundles
 Bundle "tpope/vim-fugitive"
 Bundle "scrooloose/nerdtree"
 Bundle "scrooloose/nerdcommenter"
@@ -15,7 +15,9 @@ Bundle "ervandew/supertab"
 Bundle "lepture/vim-velocity"
 Bundle "scrooloose/syntastic"
 Bundle "mattn/zencoding-vim"
-Bundle "msanders/snipmate"
+
+"vim.org bundles
+Bundle "snipMate"
 
 set backspace=indent,eol,start
 set nobackup

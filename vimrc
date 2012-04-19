@@ -15,6 +15,7 @@ Bundle "ervandew/supertab"
 Bundle "lepture/vim-velocity"
 Bundle "scrooloose/syntastic"
 Bundle "mattn/zencoding-vim"
+Bundle "wavded/vim-stylus"
 
 "vim.org bundles
 Bundle "snipMate"

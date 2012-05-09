@@ -6,7 +6,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 "Github bundles
-Bundle "tpope/vim-fugitive"
+"Bundle "tpope/vim-fugitive"
 Bundle "scrooloose/nerdtree"
 Bundle "scrooloose/nerdcommenter"
 Bundle "tpope/vim-surround"
@@ -16,9 +16,11 @@ Bundle "lepture/vim-velocity"
 Bundle "scrooloose/syntastic"
 Bundle "mattn/zencoding-vim"
 Bundle "wavded/vim-stylus"
+Bundle "shemerey/vim-peepopen"
 
 "vim.org bundles
 Bundle "snipMate"
+Bundle "jQuery"
 
 set backspace=indent,eol,start
 set nobackup
@@ -66,6 +68,7 @@ set wildignore+=*.pyc
 set wildignore+=*.egg,*.egg-info
 set wildignore+=*.orig
 "set completeopt=preview
+
 set list
 set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮
 
@@ -84,14 +87,10 @@ let NERDTreeChDirMode=2
 "let NERDTreeHijackNetrw=0
 "let g:netrw_altv=1
 "let g:netrw_browse_split=4
-let MRU_File=$HOME . '/.hide/vim_mru_files'
-let MRU_Include_Files='\.py$\|\.html$\|\.css$\|\.js$\|\.rst$'
-let MRU_Auto_Close=1
 let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
 "set noswapfile
-let g:pep8_cmd=$HOME . "/.virtualenv/lint/bin/pep8"
 "let g:syntastic_python_checker=$HOME . "/.virtualenv/lint/bin/flake8"
 let g:syntastic_check_on_open=1
 let loaded_html_syntax_checker = 0
@@ -117,15 +116,18 @@ au BufRead,BufNewFile *.less set ft=css
 autocmd FileType text setlocal textwidth=80
 autocmd FileType python setlocal textwidth=79
 autocmd FileType vim setlocal shiftwidth=2 tabstop=2
+autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
 autocmd FileType javascript setlocal smartindent
 autocmd FileType html setlocal syntax=htmldjango
 autocmd FileType css setlocal syntax=css3
 au BufRead,BufNewFile *.vm set ft=html fileencoding=gbk syntax=velocity
 au BufRead,BufNewFile *.j2 set ft=htmldjango
+au BufRead,BufNewFile jquery.*.js set syntax=jquery
 
 "map keys
 let mapleader = ","
 inoremap <C-U> <C-G>u<C-U>
+",m -> fix dos ^M
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 nnoremap ; :
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
@@ -139,14 +141,13 @@ if has("gui_running")
   set hidden
   colorscheme slate3
 endif
+
+"PeepOpen
 if has("gui_macvim")
-  "let macvim_skip_cmd_opt_movement=1
-  "menu disable &File.&Print
-  unmenu &File.&Print
+  "delete print menu
+  unmenu File.Print
   map <D-p> <Plug>PeepOpen
-  menu File.PeepOpen <Plug>PeepOpen
-  map <D-[> :tabprevious<cr>
-  map <D-]> :tabnext<cr>
+  menu File.&PeepOpen <Plug>PeepOpen
 endif
 
 "colorscheme molokai

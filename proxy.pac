@@ -21,6 +21,7 @@ hosts = [
     ,'j.mp'
     ,'.facebook.com'
     ,'.quora.com'
+    , '.feedburner.com'
 ]
 function FindProxyForURL(url, host) {
     if (isPlainHostName(host)) return 'DIRECT';

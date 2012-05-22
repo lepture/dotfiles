@@ -17,9 +17,9 @@ Bundle "scrooloose/syntastic"
 Bundle "mattn/zencoding-vim"
 Bundle "wavded/vim-stylus"
 Bundle "shemerey/vim-peepopen"
+Bundle "msanders/snipmate.vim"
 
 "vim.org bundles
-Bundle "snipMate"
 Bundle "jQuery"
 
 set backspace=indent,eol,start

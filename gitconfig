@@ -4,7 +4,7 @@
 
 [core]
     editor = vim
-    excludesfile = /Users/lepture/.gitignore
+    excludesfile = ~/.gitignore
     quotepath = false
 
 [merge]

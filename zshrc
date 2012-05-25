@@ -150,7 +150,7 @@ export LANG='en_US.UTF-8'
 export PYTHONSTARTUP=$HOME/.pystartup.py
 #export EPREFIX="$HOME/Gentoo"
 #export PATH="$EPREFIX/usr/bin:$EPREFIX/bin:$EPREFIX/tmp/usr/bin:$EPREFIX/tmp/bin:/usr/local/sbin:$PATH"
-export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH="$HOME/.dotpy:/usr/local/bin:/usr/local/sbin:$PATH"
 export NODE_PATH="/usr/local/lib/node_modules"
 
 setopt correctall

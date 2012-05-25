@@ -18,6 +18,9 @@ if [ ! -d $HOME/.hide ]; then
     mkdir "$HOME/.hide"
 fi
 
+echo "init dotpy ..."
+link dotpy
+
 echo "init vim ...."
 if [ ! -d vim/bundle/vundle ]; then
     git clone https://github.com/gmarik/vundle.git vim/bundle/vundle

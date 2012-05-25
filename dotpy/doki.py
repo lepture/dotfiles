@@ -183,19 +183,23 @@ def markdown(text, noclasses=False, lang='python'):
 
 
 if __name__ == '__main__':
+    import os
     import argparse
     parser = argparse.ArgumentParser(prog='doki')
     parser.add_argument('file', nargs='*', type=str)
     parser.add_argument('-i', '--inline', dest='inline', action='store_true',
                         help='inline style for code')
-    parser.add_argument('-t', '--template', dest='template',
-                        default='template.html')
+    parser.add_argument('-t', '--template', dest='template')
     parser.add_argument('-l', '--language', dest='language',
                         default='python')
+
     args = parser.parse_args()
-    try:
+    if args.template and args.template == 'default':
+        path = os.path.join(os.path.dirname(__file__), 'template.html')
+        template = open(os.path.abspath(path)).read()
+    elif args.template:
         template = open(args.template).read()
-    except:
+    else:
         template = "{{text}}"
 
     if args.inline:

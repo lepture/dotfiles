@@ -113,6 +113,7 @@ syntax on
 "filetype plugin on
 filetype plugin indent on
 au BufRead,BufNewFile *.less set ft=css
+au BufRead,BufNewFile *.json set ft=javascript
 autocmd FileType text setlocal textwidth=80
 autocmd FileType python setlocal textwidth=79
 autocmd FileType vim setlocal shiftwidth=2 tabstop=2

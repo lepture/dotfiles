@@ -6,8 +6,11 @@ from tornado import escape
 from pygments import highlight
 from pygments.lexers import get_lexer_by_name
 from pygments.formatters import HtmlFormatter
+from docutils.core import publish_parts
+import sphinx.directives.code
 
-__all__ = ['markdown']
+
+__all__ = ['markdown', 'rst']
 
 _emoji_list = [
     "-1", "0", "1", "109", "2", "3", "4", "5", "6", "7", "8", "8ball", "9",
@@ -186,6 +189,11 @@ def markdown(text, noclasses=False, lang=None):
     return md.render(text)
 
 
+def rst(text, *args, **kwargs):
+    parts = publish_parts(text, writer_name='html')
+    return parts['body']
+
+
 if __name__ == '__main__':
     import os
     import argparse
@@ -195,6 +203,8 @@ if __name__ == '__main__':
                         help='inline style for code')
     parser.add_argument('-t', '--template', dest='template')
     parser.add_argument('-l', '--language', dest='language')
+    parser.add_argument('--title', dest='title')
+    parser.add_argument('--github', dest='github')
 
     args = parser.parse_args()
     if args.template and args.template == 'default':
@@ -211,7 +221,14 @@ if __name__ == '__main__':
         noclasses = False
     text = ''
     for f in args.file:
-        text += markdown(open(f).read(), noclasses, args.language)
+        if f.endswith('.rst'):
+            text += rst(open(f).read(), noclasses, args.language)
+        else:
+            text += markdown(open(f).read(), noclasses, args.language)
 
     text = template.replace('{{text}}', text)
+    if args.title:
+        text = text.replace('{{title}}', args.title)
+    if args.github:
+        text = text.replace('{{github}}', args.github)
     print(text.encode('utf-8'))

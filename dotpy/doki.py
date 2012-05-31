@@ -7,7 +7,6 @@ from pygments import highlight
 from pygments.lexers import get_lexer_by_name
 from pygments.formatters import HtmlFormatter
 from docutils.core import publish_parts
-import sphinx.directives.code
 
 
 __all__ = ['markdown', 'rst']
@@ -190,8 +189,12 @@ def markdown(text, noclasses=False, lang=None):
 
 
 def rst(text, *args, **kwargs):
-    parts = publish_parts(text, writer_name='html')
-    return parts['body']
+    parts = publish_parts(
+        text, writer_name='html',
+        settings_overrides={'initial_header_level': 2},
+    )
+    html = '<h1>%s</h1>%s' % (parts['title'], parts['body'])
+    return html
 
 
 if __name__ == '__main__':

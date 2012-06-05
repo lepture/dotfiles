@@ -18,6 +18,7 @@ Bundle "mattn/zencoding-vim"
 Bundle "wavded/vim-stylus"
 Bundle "shemerey/vim-peepopen"
 Bundle "msanders/snipmate.vim"
+Bundle "altercation/vim-colors-solarized"
 
 "vim.org bundles
 Bundle "jQuery"
@@ -91,7 +92,6 @@ let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
 "set noswapfile
-"let g:syntastic_python_checker=$HOME . "/.virtualenv/lint/bin/flake8"
 let g:syntastic_check_on_open=1
 let loaded_html_syntax_checker = 0
 "let g:syntastic_auto_loc_list=1
@@ -119,7 +119,7 @@ autocmd FileType python setlocal textwidth=79
 autocmd FileType vim setlocal shiftwidth=2 tabstop=2
 autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
 autocmd FileType javascript setlocal smartindent
-autocmd FileType html setlocal syntax=htmldjango
+autocmd FileType html setlocal syntax=htmldjango smartindent
 autocmd FileType css setlocal syntax=css3
 au BufRead,BufNewFile *.vm set ft=html fileencoding=gbk syntax=velocity
 au BufRead,BufNewFile *.j2 set ft=htmldjango
@@ -133,6 +133,8 @@ noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 nnoremap ; :
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
+set background=dark
+let g:solarized_visibility='low'
 "gui setting
 if has("gui_running")
   set guioptions=egmrLt
@@ -140,7 +142,11 @@ if has("gui_running")
   winsize 100 60
   set cursorcolumn
   set hidden
-  colorscheme slate3
+  colorscheme solarized
+else
+  let g:solarized_termtrans=1
+  let g:solarized_termcolors=256
+  colorscheme solarized
 endif
 
 "PeepOpen
@@ -150,6 +156,3 @@ if has("gui_macvim")
   map <D-p> <Plug>PeepOpen
   menu File.&PeepOpen <Plug>PeepOpen
 endif
-
-"colorscheme molokai
-colorscheme slate3

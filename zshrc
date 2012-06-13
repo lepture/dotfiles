@@ -150,7 +150,7 @@ export LANG='en_US.UTF-8'
 export PYTHONSTARTUP=$HOME/.pystartup.py
 #export EPREFIX="$HOME/Gentoo"
 #export PATH="$EPREFIX/usr/bin:$EPREFIX/bin:$EPREFIX/tmp/usr/bin:$EPREFIX/tmp/bin:/usr/local/sbin:$PATH"
-export PATH="$HOME/.dotpy:/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH="$HOME/.dotpy:/usr/local/bin:/usr/local/sbin:$PATH:$HOME/.rvm/bin"
 export NODE_PATH="/usr/local/lib/node_modules"
 
 setopt correctall
@@ -168,6 +168,9 @@ alias sv="python -m SimpleHTTPServer"
 alias em="emacs"
 alias macemacs="open -a Emacs"
 
-alias gfw='ssh lepture@216.108.229.18 -ND 7070'
+alias gfw='ssh lepture@linode.lepture.com -ND 7070'
 #[[ -s $HOME/.pythonbrew/etc/bashrc ]] && source $HOME/.pythonbrew/etc/bashrc
 alias so="source $HOME/.zshrc"
+
+#: pythonbrew
+source $HOME/.pythonbrew/etc/bashrc

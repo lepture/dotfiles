@@ -10,7 +10,8 @@ Bundle 'gmarik/vundle'
 Bundle "scrooloose/nerdtree"
 Bundle "scrooloose/nerdcommenter"
 Bundle "tpope/vim-surround"
-Bundle "pangloss/vim-javascript"
+"Bundle "pangloss/vim-javascript"
+Bundle "lepture/vim-javascript"
 Bundle "ervandew/supertab"
 Bundle "lepture/vim-velocity"
 Bundle "scrooloose/syntastic"
@@ -61,7 +62,7 @@ set dictionary=/usr/share/dict/words
 "set undofile
 set wildignore+=.hg,.git,.svn
 set wildignore+=*.aux,*.out,*.toc
-set wildignore+=*.jpg,*.bmp,*.gif,*.png,*.jpeg
+"set wildignore+=*.jpg,*.bmp,*.gif,*.png,*.jpeg
 set wildignore+=*.o,*.obj,*.exe,*.dll,*.manifest
 set wildignore+=*.sw?
 set wildignore+=*.DS_Store

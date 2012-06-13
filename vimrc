@@ -7,6 +7,7 @@ Bundle 'gmarik/vundle'
 
 "Github bundles
 "Bundle "tpope/vim-fugitive"
+Bundle "tpope/vim-markdown"
 Bundle "scrooloose/nerdtree"
 Bundle "scrooloose/nerdcommenter"
 Bundle "tpope/vim-surround"

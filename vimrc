@@ -21,6 +21,7 @@ Bundle "wavded/vim-stylus"
 Bundle "shemerey/vim-peepopen"
 Bundle "msanders/snipmate.vim"
 Bundle "altercation/vim-colors-solarized"
+Bundle "Lokaltog/vim-powerline"
 
 "vim.org bundles
 Bundle "jQuery"
@@ -75,10 +76,10 @@ set wildignore+=*.orig
 set list
 set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮
 
-set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %y,%P
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+"set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %y,%P
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
 
 "configurations
 set directory=$HOME/.hide
@@ -96,6 +97,7 @@ let g:html_indent_style1 = "inc"
 "set noswapfile
 let g:syntastic_check_on_open=1
 let loaded_html_syntax_checker = 0
+"let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
 "let g:syntastic_auto_loc_list=1
 
 
@@ -115,7 +117,6 @@ syntax on
 "filetype plugin on
 filetype plugin indent on
 au BufRead,BufNewFile *.less set ft=css
-au BufRead,BufNewFile *.json set ft=javascript
 autocmd FileType text setlocal textwidth=80
 autocmd FileType python setlocal textwidth=79
 autocmd FileType vim setlocal shiftwidth=2 tabstop=2

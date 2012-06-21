@@ -18,7 +18,7 @@ export DISABLE_AUTO_UPDATE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git git-flow)
+plugins=(git pip brew)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -169,7 +169,6 @@ alias em="emacs"
 alias macemacs="open -a Emacs"
 
 alias gfw='ssh lepture@linode.lepture.com -ND 7070'
-#[[ -s $HOME/.pythonbrew/etc/bashrc ]] && source $HOME/.pythonbrew/etc/bashrc
 alias so="source $HOME/.zshrc"
 
 #: pythonbrew

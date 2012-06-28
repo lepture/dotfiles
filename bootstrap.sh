@@ -29,9 +29,6 @@ link vim
 link vimrc
 vim +BundleInstall +qall
 
-echo "init emacs ...."
-#link emacs.d
-
 echo "init git ...."
 link gitconfig
 link gitignore
@@ -43,6 +40,13 @@ link hg-prompt.py
 echo "init zsh ...."
 link zshrc
 link pystartup.py
+
+SUBLIME="$HOME/Library/Application Support/Sublime Text 2/Packages/User/"
+if [ -d "$SUBLIME" ]; then
+    echo "init sublime"
+    ln -s "`pwd`/Preferences.sublime-settings" "$SUBLIME/Preferences.sublime-settings"
+fi
+
 
 echo "init python env ..."
 if which pip > /dev/null; then
@@ -58,7 +62,7 @@ fi
 if [ ! -d $HOME/.virtualenv ]; then
     echo "create virualenv directory"
     mkdir "$HOME/.virtualenv"
-    virtualenv $HOME/.virtualenv/lint --no-site-packages
+    virtualenv $HOME/.virtualenv/lint
     source $HOME/.virtualenv/lint/bin/active
     pip install flake8
     deactive

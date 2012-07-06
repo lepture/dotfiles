@@ -161,13 +161,19 @@ hr.end {
 }
 
 span[class$=label] {
-    font-size: 14px;
+    font-size: 12px;
     border-radius: 3px;
     color: white;
     padding: 2px 8px 0;
     position: relative;
-    top: -8px;
+    top: -7px;
     left: 2px;
+}
+em[class$=label] {
+    font-style: normal;
+    border-radius: 3px;
+    color: white;
+    padding: 2px 8px 0;
 }
 .red-label {
     background: rgba(240, 17, 68, 0.8);

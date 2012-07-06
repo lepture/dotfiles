@@ -164,12 +164,9 @@ alias la="ls -A"
 alias grep="grep --color=auto"
 alias fgrep="fgrep --color=auto"
 alias egrep="egrep --color=auto"
-alias sv="python -m SimpleHTTPServer"
-alias em="emacs"
-alias macemacs="open -a Emacs"
 
 alias gfw='ssh lepture@linode.lepture.com -ND 7070'
 alias so="source $HOME/.zshrc"
 
-#: pythonbrew
-source $HOME/.pythonbrew/etc/bashrc
+alias switch_to_pythonbrew = "source $HOME/.pythonbrew/etc/bashrc"
+alias switch_to_rvm = "source $HOME/.rvm/scripts/rvm"

@@ -168,5 +168,5 @@ alias egrep="egrep --color=auto"
 alias gfw='ssh lepture@linode.lepture.com -ND 7070'
 alias so="source $HOME/.zshrc"
 
-alias switch_to_pythonbrew = "source $HOME/.pythonbrew/etc/bashrc"
-alias switch_to_rvm = "source $HOME/.rvm/scripts/rvm"
+alias switch_to_pythonbrew="source $HOME/.pythonbrew/etc/bashrc"
+alias switch_to_rvm="source $HOME/.rvm/scripts/rvm"

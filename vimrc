@@ -56,6 +56,7 @@ set cmdheight=1
 "set smartindent
 set cursorline
 "set cursorcolumn
+set colorcolumn=+1
 set autoread
 set wildmenu
 set ttyfast

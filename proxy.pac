@@ -1,6 +1,6 @@
 proxy = 'SOCKS5 127.0.0.1:7070; DIRECT';
 urls = [
-    '*twitter.com*'
+    '*fuckgfw'
 ]
 hosts = [
     'twitter.com'
@@ -24,6 +24,8 @@ hosts = [
     , '.feedburner.com'
     , '.youtube.com'
     , 'travis-ci.org'
+    , 'nokogiri.org'
+    , 'jsperf.com'
 ]
 function FindProxyForURL(url, host) {
     if (isPlainHostName(host)) return 'DIRECT';

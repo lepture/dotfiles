@@ -41,12 +41,6 @@ echo "init zsh ...."
 link zshrc
 link pystartup.py
 
-SUBLIME="$HOME/Library/Application Support/Sublime Text 2/Packages/User/"
-if [ -d "$SUBLIME" ]; then
-    echo "init sublime"
-    ln -s "`pwd`/Preferences.sublime-settings" "$SUBLIME/Preferences.sublime-settings"
-fi
-
 
 echo "init python env ..."
 if which pip > /dev/null; then

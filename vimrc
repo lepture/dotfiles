@@ -15,6 +15,7 @@ Bundle "tpope/vim-surround"
 Bundle "lepture/vim-javascript"
 Bundle "ervandew/supertab"
 Bundle "lepture/vim-velocity"
+Bundle "lepture/vim-css"
 Bundle "scrooloose/syntastic"
 Bundle "mattn/zencoding-vim"
 Bundle "wavded/vim-stylus"
@@ -24,7 +25,6 @@ Bundle "altercation/vim-colors-solarized"
 Bundle "Lokaltog/vim-powerline"
 
 "vim.org bundles
-Bundle "jQuery"
 
 set backspace=indent,eol,start
 set nobackup
@@ -119,14 +119,13 @@ syntax on
 filetype plugin indent on
 au BufRead,BufNewFile *.less set ft=css
 autocmd FileType text setlocal textwidth=80
-autocmd FileType python setlocal textwidth=79
+autocmd FileType python setlocal textwidth=79 shiftwidth=4
 autocmd FileType vim setlocal shiftwidth=2 tabstop=2
 autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
-autocmd FileType javascript setlocal smartindent
-autocmd FileType html setlocal syntax=htmldjango smartindent
-autocmd FileType css setlocal syntax=css3
+autocmd FileType javascript setlocal smartindent ts=2 sw=2
+autocmd FileType html setlocal sw=2 ts=2 syntax=htmldjango smartindent
+autocmd FileType htmldjango setlocal sw=2 ts=2
 au BufRead,BufNewFile *.vm set ft=html fileencoding=gbk syntax=velocity
-au BufRead,BufNewFile *.j2 set ft=htmldjango
 au BufRead,BufNewFile jquery.*.js set syntax=jquery
 
 "map keys

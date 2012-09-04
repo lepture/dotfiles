@@ -1,6 +1,7 @@
-proxy = 'SOCKS5 127.0.0.1:7070; DIRECT';
+proxy = 'SOCKS5 127.0.0.1:7999; DIRECT';
 urls = [
-    '*fuckgfw'
+    '*nogfw'
+    ,'*.tw*'
 ]
 hosts = [
     'twitter.com'
@@ -13,6 +14,7 @@ hosts = [
     ,'.vimeo.com'
     ,'.appspot.com'
     ,'.blogspot.com'
+    ,'.blogger.com'
     ,'wordpress.com'
     ,'.wordpress.com'
     ,'cl.ly'
@@ -21,11 +23,12 @@ hosts = [
     ,'j.mp'
     ,'.facebook.com'
     ,'.quora.com'
-    , '.feedburner.com'
-    , '.youtube.com'
-    , 'travis-ci.org'
-    , 'nokogiri.org'
-    , 'jsperf.com'
+    ,'.feedburner.com'
+    ,'.youtube.com'
+    ,'travis-ci.org'
+    ,'nokogiri.org'
+    ,'jsperf.com'
+    ,'.imdb.com'
 ]
 function FindProxyForURL(url, host) {
     if (isPlainHostName(host)) return 'DIRECT';

@@ -3,7 +3,7 @@ build
 # Test DB
 *.sqlite
 # Test
-test.*
+#test.*
 .hg
 .svn
 CVS
@@ -20,7 +20,6 @@ CVS
 # dist
 eggs
 parts
-bin
 var
 sdist
 develop-eggs

@@ -148,10 +148,12 @@ zstyle ':completion:*:my-accounts' users-hosts $my_accounts
 
 export LANG='en_US.UTF-8'
 export PYTHONSTARTUP=$HOME/.pystartup.py
-#export EPREFIX="$HOME/Gentoo"
-#export PATH="$EPREFIX/usr/bin:$EPREFIX/bin:$EPREFIX/tmp/usr/bin:$EPREFIX/tmp/bin:/usr/local/sbin:$PATH"
-export PATH="$HOME/.dotpy:/usr/local/bin:/usr/local/sbin:$PATH:$HOME/.rvm/bin"
+export PATH="$HOME/.dotpy:/usr/local/bin:/usr/local/sbin:$PATH:$HOME/.rvm/bin:/usr/local/share/npm/bin"
 export NODE_PATH="/usr/local/lib/node_modules"
+# virtualenvwrapper
+export WORKON_HOME=$HOME/.virtualenv
+export PROJECT_HOME=$HOME/workspace/python
+source /usr/local/bin/virtualenvwrapper.sh
 
 setopt correctall
 setopt extendedglob
@@ -165,7 +167,7 @@ alias grep="grep --color=auto"
 alias fgrep="fgrep --color=auto"
 alias egrep="egrep --color=auto"
 
-alias gfw='ssh lepture@linode.lepture.com -ND 7070'
+alias gfw='ssh lepture@linode.lepture.com -ND 7999'
 alias so="source $HOME/.zshrc"
 
 alias switch_to_pythonbrew="source $HOME/.pythonbrew/etc/bashrc"

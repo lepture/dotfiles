@@ -29,6 +29,7 @@ hosts = [
     ,'nokogiri.org'
     ,'jsperf.com'
     ,'.imdb.com'
+    ,'.slideshare.net'
 ]
 function FindProxyForURL(url, host) {
     if (isPlainHostName(host)) return 'DIRECT';

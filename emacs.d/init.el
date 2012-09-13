@@ -19,7 +19,7 @@
 (add-to-list 'load-path emacs-custom-dir)
 
 ;; common settings
-(setq default-fill-column 60)
+(setq default-fill-column 80)
 (setq inhibit-startup-message t)
 (setq mouse-yank-at-point t)
 
@@ -29,8 +29,8 @@
 
 ;; indent style
 (setq indent-tabs-mode nil)
-(setq default-tab-width 4)
-(setq tab-width 4)
+(setq default-tab-width 2)
+(setq tab-width 2)
 
 ;; auto save and tramp
 (setq make-backup-files t)
@@ -41,7 +41,7 @@
 (setq  tramp-persistency-file-name "~/.hide/tramp")
 
 ;; user config
-(setq user-full-name "Hsiaoming Young")
+(setq user-full-name "Hsiaoming Yang")
 (setq user-mail-address "lepture@me.com")
 
 ;; replace "yes or no" with y or n

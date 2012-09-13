@@ -16,6 +16,7 @@ Bundle "lepture/vim-javascript"
 Bundle "ervandew/supertab"
 Bundle "lepture/vim-velocity"
 Bundle "lepture/vim-css"
+Bundle "lepture/vim-jinja"
 Bundle "scrooloose/syntastic"
 Bundle "mattn/zencoding-vim"
 Bundle "wavded/vim-stylus"
@@ -123,8 +124,7 @@ autocmd FileType python setlocal textwidth=79 shiftwidth=4
 autocmd FileType vim setlocal shiftwidth=2 tabstop=2
 autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
 autocmd FileType javascript setlocal smartindent ts=2 sw=2
-autocmd FileType html setlocal sw=2 ts=2 syntax=htmldjango smartindent
-autocmd FileType htmldjango setlocal sw=2 ts=2
+autocmd FileType html setlocal sw=2 ts=2
 au BufRead,BufNewFile *.vm set ft=html fileencoding=gbk syntax=velocity
 au BufRead,BufNewFile jquery.*.js set syntax=jquery
 

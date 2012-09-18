@@ -8,7 +8,7 @@ Bundle 'gmarik/vundle'
 "Github bundles
 "Bundle "tpope/vim-fugitive"
 Bundle "tpope/vim-markdown"
-Bundle "scrooloose/nerdtree"
+"Bundle "scrooloose/nerdtree"
 Bundle "scrooloose/nerdcommenter"
 Bundle "tpope/vim-surround"
 "Bundle "pangloss/vim-javascript"
@@ -125,6 +125,7 @@ autocmd FileType vim setlocal shiftwidth=2 tabstop=2
 autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
 autocmd FileType javascript setlocal smartindent ts=2 sw=2
 autocmd FileType html setlocal sw=2 ts=2
+autocmd FileType jinja setlocal sw=2 ts=2
 au BufRead,BufNewFile *.vm set ft=html fileencoding=gbk syntax=velocity
 au BufRead,BufNewFile jquery.*.js set syntax=jquery
 

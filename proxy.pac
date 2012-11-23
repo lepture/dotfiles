@@ -1,7 +1,9 @@
-proxy = 'SOCKS5 127.0.0.1:7999; DIRECT';
+proxy = 'SOCKS5 127.0.0.1:7999';
+
 urls = [
     '*nogfw'
     ,'*.tw*'
+    ,'*.fbcdn.net*'
 ]
 hosts = [
     'twitter.com'
@@ -21,6 +23,7 @@ hosts = [
     ,'.pandora.com'
     ,'img.ly'
     ,'j.mp'
+    ,'facebook.com'
     ,'.facebook.com'
     ,'.quora.com'
     ,'.feedburner.com'

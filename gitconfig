@@ -1,10 +1,10 @@
 [user]
-    name = lepture
+    name = Hsiaoming Yang
     email = lepture@me.com
 
 [core]
     editor = vim
-	excludesfile = /Users/lepture/.gitignore
+    excludesfile = /Users/lepture/.gitignore
     quotepath = false
 
 [merge]

@@ -167,7 +167,7 @@ alias grep="grep --color=auto"
 alias fgrep="fgrep --color=auto"
 alias egrep="egrep --color=auto"
 
-alias gfw='ssh lepture@linode.lepture.com -ND 7999'
+alias gfw='ssh admin@aralejs.org -ND 7999'
 alias so="source $HOME/.zshrc"
 
 alias switch_to_pythonbrew="source $HOME/.pythonbrew/etc/bashrc"

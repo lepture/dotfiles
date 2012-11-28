@@ -33,6 +33,7 @@ hosts = [
     ,'jsperf.com'
     ,'.imdb.com'
     ,'.slideshare.net'
+    ,'.nytimes.com'
 ]
 function FindProxyForURL(url, host) {
     if (isPlainHostName(host)) return 'DIRECT';

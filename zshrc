@@ -140,24 +140,35 @@ bindkey "\e\e" sudo-command-line
 #}}}
 #补全 ssh scp sftp 等
 my_accounts=(
+    ubuntu@54.241.240.210
     lepture@216.108.229.18
     lepture@sdf.org
 )
 zstyle ':completion:*:my-accounts' users-hosts $my_accounts
 #}}}
 
+setopt correctall
+setopt extendedglob
+setopt AUTO_CD
+
 export LANG='en_US.UTF-8'
 export PYTHONSTARTUP=$HOME/.pystartup.py
-export PATH="$HOME/.dotpy:/usr/local/bin:/usr/local/sbin:$PATH:$HOME/.rvm/bin:/usr/local/share/npm/bin"
-export NODE_PATH="/usr/local/lib/node_modules"
+
+export PATH="$PATH:/usr/local/sbin"
+
+# nodejs
+export PATH="$PATH:/usr/local/share/npm/bin"
+export NODE_PATH="/usr/local/share/npm/lib/node_modules"
+export PATH="$HOME/workspace/node/spm/bin:$PATH"
+
+# golang
+export GOPATH=$HOME/workspace/go
+export PATH="$PATH:$GOPATH/bin"
+
 # virtualenvwrapper
 export WORKON_HOME=$HOME/.virtualenv
 export PROJECT_HOME=$HOME/workspace/python
 source /usr/local/bin/virtualenvwrapper.sh
-
-setopt correctall
-setopt extendedglob
-setopt AUTO_CD
 
 #alias ls="ls -wG"
 alias ll="ls -alF"

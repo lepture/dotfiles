@@ -6,26 +6,27 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 "Github bundles
-"Bundle "tpope/vim-fugitive"
 Bundle "tpope/vim-markdown"
 "Bundle "scrooloose/nerdtree"
 Bundle "scrooloose/nerdcommenter"
 Bundle "tpope/vim-surround"
-"Bundle "pangloss/vim-javascript"
-Bundle "lepture/vim-javascript"
-Bundle "ervandew/supertab"
+Bundle "pangloss/vim-javascript"
+"Bundle "lepture/vim-javascript"
+"Bundle "ervandew/supertab"
 Bundle "lepture/vim-velocity"
 Bundle "lepture/vim-css"
 Bundle "lepture/vim-jinja"
+Bundle "goldfeld/vim-seek"
 Bundle "scrooloose/syntastic"
 Bundle "mattn/zencoding-vim"
-Bundle "wavded/vim-stylus"
+"Bundle "wavded/vim-stylus"
 Bundle "shemerey/vim-peepopen"
 Bundle "msanders/snipmate.vim"
 Bundle "altercation/vim-colors-solarized"
 Bundle "Lokaltog/vim-powerline"
-
-"vim.org bundles
+Bundle "jnwhiteh/vim-golang"
+Bundle 'airblade/vim-gitgutter'
+"Bundle "kien/ctrlp.vim"
 
 set backspace=indent,eol,start
 set nobackup
@@ -97,10 +98,13 @@ let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
 "set noswapfile
+
+
+" syntastic configuration
 let g:syntastic_check_on_open=1
+let g:syntastic_python_checker_args = "--ignore=E127"
+let g:syntastic_javascript_jshint_conf = $HOME . "/.vim/conf/jshintrc"
 let loaded_html_syntax_checker = 0
-"let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
-"let g:syntastic_auto_loc_list=1
 
 
 " tabs
@@ -122,12 +126,12 @@ au BufRead,BufNewFile *.less set ft=css
 autocmd FileType text setlocal textwidth=80
 autocmd FileType python setlocal textwidth=79 shiftwidth=4
 autocmd FileType vim setlocal shiftwidth=2 tabstop=2
+autocmd FileType css setlocal shiftwidth=2 tabstop=2
 autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
 autocmd FileType javascript setlocal smartindent ts=2 sw=2
 autocmd FileType html setlocal sw=2 ts=2
 autocmd FileType jinja setlocal sw=2 ts=2
 au BufRead,BufNewFile *.vm set ft=html fileencoding=gbk syntax=velocity
-au BufRead,BufNewFile jquery.*.js set syntax=jquery
 
 "map keys
 let mapleader = ","

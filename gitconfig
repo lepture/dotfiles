@@ -17,7 +17,7 @@
     prompt = false
 
 [alias]
-    st = status
+    st = status -sb
     ci = commit -a
     br = branch
     df = diff
@@ -25,6 +25,7 @@
     who = shortlog -s --
     unstage = reset HEAD --
     last = log -1 HEAD
+    addremove = add -A
     lg = log --graph --pretty='format:%Cblue%an%Creset commit at %Cgreen%ar%Creset: \n %Cred%h%Creset %C(yellow)%d%Creset %s\n'
     graphviz = "!f() { echo 'digraph git {' ; git log --pretty='format:  %h -> { %p }' \"$@\" | sed 's/[0-9a-f][0-9a-f]*/\"&\"/g' ; echo '}'; }; f"
     lc = "! git log --pretty=oneline|wc -l"

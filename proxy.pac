@@ -1,4 +1,4 @@
-proxy = 'SOCKS5 127.0.0.1:7999';
+proxy = 'SOCKS5 127.0.0.1:7999; DIRECT';
 
 urls = [
     '*nogfw'
@@ -34,6 +34,7 @@ hosts = [
     ,'.imdb.com'
     ,'.slideshare.net'
     ,'.nytimes.com'
+    ,'.icnfnt.com'
 ]
 function FindProxyForURL(url, host) {
     if (isPlainHostName(host)) return 'DIRECT';

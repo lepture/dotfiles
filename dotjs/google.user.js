@@ -1,5 +1,6 @@
 // ==UserScript==
 // @name          Google HTTPS
+// @version       1.0.0
 // @namespace     http://lepture.com/project/js-google
 // @description   Always use https on google. Fix search results links.
 // @include       http://www.google.com/*

@@ -13,27 +13,44 @@
 // @author        lepture
 //
 
-if (location.host == 'www.google.com.hk') {
-    location.assign('https://www.google.com/ncr');
-    return;
-}
-if (location.protocol == 'http:') {
-    location.assign(location.toString().replace('http://','https://'));
-    return;
+if (location.host === 'www.google.com.hk') {
+  // always use global version of google
+  location.assign('https://www.google.com/ncr');
+  return;
 }
 
-if (location.host != 'www.google.com') return;
-
-function repl() {
-    window.onhashchange = function() {
-        var ires = document.getElementById('ires');
-        var h3s = ires.getElementsByTagName('h3');
-        for(i=0; i<h3s.length; i++) {
-            var a = h3s[i].getElementsByTagName('a')[0];
-            a.onmousedown = function(){};
-            a.onclick = function(){};
-        }
-    }
+if (location.protocol === 'http:') {
+  // always use https
+  location.assign(location.toString().replace('http://','https://'));
+  return;
 }
 
-setTimeout(repl, 300);
+if (location.host !== 'www.google.com') return;
+
+// remove redirects
+(function() {
+  var target = document.querySelector('body')
+
+  var observer = new WebKitMutationObserver(function() {
+    var links = document.querySelectorAll('a[onmousedown]')
+    makeArray(links).forEach(function(link) {
+      link.onmousedown = null
+    })
+  })
+
+  observer.observe(target, { childList: true })
+
+
+  // Helpers
+  // -------
+
+  function makeArray(nodeList) {
+    return Array.prototype.slice.call(nodeList)
+  }
+
+
+  // Thanks to
+  // - https://developer.mozilla.org/en-US/docs/DOM/MutationObserver
+  // - http://userscripts.org/scripts/review/117942
+
+})()

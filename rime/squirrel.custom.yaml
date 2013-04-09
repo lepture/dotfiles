@@ -1,0 +1,25 @@
+patch:
+  style:
+    us_keyboard_layout: true
+    color_scheme: lepture
+    horizontal: true
+
+  preset_color_schemes:
+    lepture:
+        name: 'lepture'
+        back_color: 0xeeffffff
+        border_height: 3
+        border_width: 6
+        corner_radius: 2
+        font_point: 18
+        candidate_format: "%c %@ "
+        candidate_text_color: 0x666666
+        hilited_candidate_back_color: 0x00000000
+        hilited_candidate_label_color: 0xaaaaaa
+        hilited_candidate_text_color: 0x000000
+        horizontal: true
+        label_color: 0xaaaaaa
+        label_font_point: 11
+        comment_text_color: 0xeeaaaaaa
+        comment_text_font_point: 11
+        font_face: 'Hiragino Sans GB'

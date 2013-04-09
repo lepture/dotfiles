@@ -18,6 +18,26 @@ if [ ! -d $HOME/.hide ]; then
     mkdir "$HOME/.hide"
 fi
 
+link_rime() {
+    if [ ! -h $HOME/Library/Rime/$1 ]; then
+        ln -s "`pwd`/rime/$1" "$HOME/Library/Rime/$1"
+    fi
+}
+echo "init rime"
+link_rime default.custom.yaml
+link_rime squirrel.custom.yaml
+link_rime wubi_pinyin.custom.yaml
+link_rime wubi86.custom.yaml
+link_rime opencc/zhs2zht.ini
+# download ocd files
+
+OPENCC="/Library/Input Methods/Squirrel.app/Contents/SharedSupport/opencc"
+if [ ! -f "$OPENCC/simp_to_trad_phrases.ocd" ]; then
+    baseurl=https://rimeime.googlecode.com/svn/trunk/misc/opencc/data
+    curl ${baseurl}/simp_to_trad_phrases.ocd -o "$OPENCC/simp_to_trad_phrases.ocd"
+    curl ${baseurl}/simp_to_trad_characters.ocd -o "$OPENCC/simp_to_trad_characters.ocd"
+fi
+
 echo "init dotpy ..."
 link dotpy
 

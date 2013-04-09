@@ -3,16 +3,11 @@
 
 patch:
     schema_list:
-      - schema: luna_pinyin
       - schema: wubi_pinyin
       - schema: wubi86
+      - schema: luna_pinyin
 
-    switcher:
-      caption: Input Method
-      hotkeys:
-        - 'Control+s'
-        - 'Control+Shift+s'
-        - F4
+    switcher/hotkeys:
+        - 'Control+space'
 
-    menu:
-      page_size: 5
+    menu/page_size: 6

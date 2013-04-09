@@ -49,9 +49,6 @@ link vim
 link vimrc
 vim +BundleInstall +qall
 
-echo "init emacs ...."
-link emacs.d
-
 echo "init git ...."
 link gitconfig
 link gitignore

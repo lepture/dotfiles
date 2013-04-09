@@ -6,6 +6,7 @@ build
 #test.*
 .hg
 .svn
+.cache
 CVS
 *.swp
 *~

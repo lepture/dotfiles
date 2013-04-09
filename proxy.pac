@@ -34,6 +34,7 @@ hosts = [
     ,'.imdb.com'
     ,'.slideshare.net'
     ,'.nytimes.com'
+    ,'.ytimg.com'
     ,'.icnfnt.com'
 ]
 function FindProxyForURL(url, host) {

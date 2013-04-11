@@ -10,6 +10,7 @@ build
 CVS
 *.swp
 *~
+*.iml
 
 
 # python

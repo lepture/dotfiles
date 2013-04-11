@@ -159,7 +159,7 @@ export PATH="$PATH:/usr/local/sbin"
 # nodejs
 export PATH="$PATH:/usr/local/share/npm/bin"
 export NODE_PATH="/usr/local/share/npm/lib/node_modules"
-export PATH="$HOME/workspace/node/spm/bin:$PATH"
+export PATH="$HOME/workspace/spmjs/spm/bin:$PATH"
 
 # golang
 export GOPATH=$HOME/workspace/go

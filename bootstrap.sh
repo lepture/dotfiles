@@ -8,9 +8,8 @@ if [ ! -f ./vimrc ]; then
 fi
 
 link() {
-    if [ ! -h $HOME/.$1 ]; then
-       ln -s "`pwd`/$1" "$HOME/.$1"
-    fi
+    rm "$HOME/.$1"
+    ln -s "`pwd`/$1" "$HOME/.$1"
 }
 
 if [ ! -d $HOME/.hide ]; then
@@ -19,9 +18,8 @@ if [ ! -d $HOME/.hide ]; then
 fi
 
 link_rime() {
-    if [ ! -h $HOME/Library/Rime/$1 ]; then
-        ln -s "`pwd`/rime/$1" "$HOME/Library/Rime/$1"
-    fi
+    rm "$HOME/Library/Rime/$1"
+    ln -s "`pwd`/rime/$1" "$HOME/Library/Rime/$1"
 }
 echo "init rime"
 link_rime default.custom.yaml

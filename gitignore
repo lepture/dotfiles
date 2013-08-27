@@ -29,6 +29,7 @@ develop-eggs
 
 # Installer logs
 pip-log.txt
+demo.py
 
 # Unit test / coverage reports
 .coverage
@@ -64,3 +65,6 @@ xcuserdata
 profile
 *.moved-aside
 DerivedData
+
+# Idea
+.idea/

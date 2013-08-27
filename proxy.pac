@@ -36,6 +36,13 @@ hosts = [
     ,'.nytimes.com'
     ,'.ytimg.com'
     ,'.icnfnt.com'
+    ,'golang.org'
+    ,'cocoapods.org'
+    ,'zh.wikipedia.org'
+    ,'bit.ly'
+    ,'developer.chrome.com'
+    // ,'trello.com'
+    ,'www.gstatic.com'
 ]
 function FindProxyForURL(url, host) {
     if (isPlainHostName(host)) return 'DIRECT';

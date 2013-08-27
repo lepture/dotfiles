@@ -7,26 +7,21 @@ Bundle 'gmarik/vundle'
 
 "Github bundles
 Bundle "tpope/vim-markdown"
-"Bundle "scrooloose/nerdtree"
 Bundle "scrooloose/nerdcommenter"
 Bundle "tpope/vim-surround"
 Bundle "pangloss/vim-javascript"
-"Bundle "lepture/vim-javascript"
-"Bundle "ervandew/supertab"
 Bundle "lepture/vim-velocity"
 Bundle "lepture/vim-css"
 Bundle "lepture/vim-jinja"
 Bundle "goldfeld/vim-seek"
 Bundle "scrooloose/syntastic"
 Bundle "mattn/zencoding-vim"
-"Bundle "wavded/vim-stylus"
 Bundle "shemerey/vim-peepopen"
 Bundle "msanders/snipmate.vim"
 Bundle "altercation/vim-colors-solarized"
 Bundle "Lokaltog/vim-powerline"
 Bundle "jnwhiteh/vim-golang"
-Bundle 'airblade/vim-gitgutter'
-"Bundle "kien/ctrlp.vim"
+"Bundle 'airblade/vim-gitgutter'
 
 set backspace=indent,eol,start
 set nobackup
@@ -131,6 +126,7 @@ autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
 autocmd FileType javascript setlocal smartindent ts=2 sw=2
 autocmd FileType html setlocal sw=2 ts=2
 autocmd FileType jinja setlocal sw=2 ts=2
+autocmd FileType yaml setlocal sw=2 ts=2
 au BufRead,BufNewFile *.vm set ft=html fileencoding=gbk syntax=velocity
 
 "map keys

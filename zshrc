@@ -157,18 +157,15 @@ export PYTHONSTARTUP=$HOME/.pystartup.py
 export PATH="$PATH:/usr/local/sbin"
 
 # nodejs
-export PATH="$PATH:/usr/local/share/npm/bin"
+export PATH="/usr/local/share/npm/bin:$PATH"
 export NODE_PATH="/usr/local/share/npm/lib/node_modules"
-export PATH="$HOME/workspace/spmjs/spm/bin:$PATH"
 
 # golang
 export GOPATH=$HOME/workspace/go
 export PATH="$PATH:$GOPATH/bin"
 
-# virtualenvwrapper
-export WORKON_HOME=$HOME/.virtualenv
-export PROJECT_HOME=$HOME/workspace/python
-source /usr/local/bin/virtualenvwrapper.sh
+# component
+export COMPONENT_PATH=$HOME/workspace/component
 
 #alias ls="ls -wG"
 alias ll="ls -alF"
@@ -181,5 +178,7 @@ alias egrep="egrep --color=auto"
 alias gfw='ssh admin@aralejs.org -ND 7999'
 alias so="source $HOME/.zshrc"
 
-alias switch_to_pythonbrew="source $HOME/.pythonbrew/etc/bashrc"
-alias switch_to_rvm="source $HOME/.rvm/scripts/rvm"
+alias switch_to_pythonz="source $HOME/.pythonz/etc/bashrc"
+source $HOME/.rvm/scripts/rvm
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

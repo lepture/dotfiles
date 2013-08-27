@@ -55,8 +55,8 @@ echo "init hg"
 link hgrc
 link hg-prompt.py
 
-echo "init zsh ...."
-link zshrc
+#echo "init zsh ...."
+#link zshrc
 link pystartup.py
 
 
@@ -71,11 +71,11 @@ if which virtualenv > /dev/null; then
 else
     sudo pip install virtualenv
 fi
-if [ ! -d $HOME/.virtualenv ]; then
+if [ ! -d $HOME/.venvs ]; then
     echo "create virualenv directory"
-    mkdir "$HOME/.virtualenv"
-    virtualenv $HOME/.virtualenv/lint
-    source $HOME/.virtualenv/lint/bin/active
+    mkdir "$HOME/.venvs"
+    virtualenv $HOME/.venvs/lint
+    source $HOME/.venvs/lint/bin/active
     pip install flake8
     deactive
 fi
@@ -84,12 +84,12 @@ if [ ! -d $HOME/workspace ]; then
     mkdir "$HOME/workspace"
 fi
 
-if [ ! -d ~/.oh-my-zsh ]; then
-    git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
-fi
+#if [ ! -d ~/.oh-my-zsh ]; then
+#    git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+#fi
 
-if which zsh > /dev/null; then
-    echo "chsh -s `which zsh`"
-else
-    echo "install zsh"
-fi
+#if which zsh > /dev/null; then
+#    echo "chsh -s `which zsh`"
+#else
+#    echo "install zsh"
+#fi

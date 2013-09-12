@@ -41,8 +41,14 @@ hosts = [
     ,'zh.wikipedia.org'
     ,'bit.ly'
     ,'developer.chrome.com'
-    // ,'trello.com'
-    ,'www.gstatic.com'
+    ,'.gstatic.com'
+    ,'.googleapis.com'
+    ,'hootsuite.com'
+    ,'tweetdeck.com'
+    ,'api.google.com'
+    ,'apis.google.com'
+    ,'.googleusercontent.com'
+    // ,'.google-analytics.com'
 ]
 function FindProxyForURL(url, host) {
     if (isPlainHostName(host)) return 'DIRECT';

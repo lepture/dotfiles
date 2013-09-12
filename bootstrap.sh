@@ -69,6 +69,12 @@ if [ ! -d $HOME/workspace ]; then
     mkdir "$HOME/workspace"
 fi
 
+echo "init nodejs"
+if [ ! -d $HOME/.config/bin/n ]; then
+    mkdir -p $HOME/.config/bin
+    curl https://raw.github.com/visionmedia/n/master/bin/n -o $HOME/.config/bin/n
+    chmod +x $HOME/.config/bin/n
+fi
 
 # rime input method
 link_rime() {
@@ -80,7 +86,7 @@ link_rime default.custom.yaml
 link_rime squirrel.custom.yaml
 link_rime wubi_pinyin.custom.yaml
 link_rime wubi86.custom.yaml
-link_rime opencc/zhs2zht.ini
+# link_rime opencc/zhs2zht.ini
 # download ocd files
 
 OPENCC="/Library/Input Methods/Squirrel.app/Contents/SharedSupport/opencc"

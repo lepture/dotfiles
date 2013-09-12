@@ -1,27 +1,28 @@
 " System
 set nocompatible
 filetype off
+set shell=/bin/bash
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
 
 "Github bundles
-Bundle "tpope/vim-markdown"
-Bundle "scrooloose/nerdcommenter"
-Bundle "tpope/vim-surround"
+"Bundle "tpope/vim-markdown"
+"Bundle "scrooloose/nerdcommenter"
+"Bundle "tpope/vim-surround"
 Bundle "pangloss/vim-javascript"
-Bundle "lepture/vim-velocity"
+"Bundle "lepture/vim-velocity"
 Bundle "lepture/vim-css"
 Bundle "lepture/vim-jinja"
-Bundle "goldfeld/vim-seek"
+"Bundle "goldfeld/vim-seek"
 Bundle "scrooloose/syntastic"
 Bundle "mattn/zencoding-vim"
-Bundle "shemerey/vim-peepopen"
-Bundle "msanders/snipmate.vim"
+"Bundle "shemerey/vim-peepopen"
+"Bundle "msanders/snipmate.vim"
 Bundle "altercation/vim-colors-solarized"
 Bundle "Lokaltog/vim-powerline"
-Bundle "jnwhiteh/vim-golang"
-"Bundle 'airblade/vim-gitgutter'
+"Bundle "jnwhiteh/vim-golang"
+Bundle 'airblade/vim-gitgutter'
 
 set backspace=indent,eol,start
 set nobackup

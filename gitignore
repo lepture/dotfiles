@@ -35,6 +35,9 @@ demo.py
 .coverage
 .tox
 
+# Virtualenv
+.venv
+
 # Translations
 *.mo
 

@@ -1,10 +1,13 @@
-proxy = 'SOCKS5 127.0.0.1:7999; DIRECT';
+proxy = 'SOCKS5 127.0.0.1:7999';
 
 urls = [
     '*nogfw'
     ,'*.tw*'
     ,'*.fbcdn.net*'
+    ,'*.ip.cn*'
+    ,'*twitter.com*'
 ]
+
 hosts = [
     'twitter.com'
     ,'.twitter.com'
@@ -22,6 +25,7 @@ hosts = [
     ,'cl.ly'
     ,'.pandora.com'
     ,'img.ly'
+    ,'bit.ly'
     ,'j.mp'
     ,'facebook.com'
     ,'.facebook.com'
@@ -39,24 +43,19 @@ hosts = [
     ,'golang.org'
     ,'cocoapods.org'
     ,'zh.wikipedia.org'
-    ,'bit.ly'
     ,'developer.chrome.com'
     ,'.gstatic.com'
     ,'.googleapis.com'
-    ,'hootsuite.com'
     ,'tweetdeck.com'
     ,'api.google.com'
     ,'apis.google.com'
     ,'.googleusercontent.com'
-    // ,'.google-analytics.com'
+    ,'plus.google.com'
 ]
 function FindProxyForURL(url, host) {
     if (isPlainHostName(host)) return 'DIRECT';
     for (i=0; i < urls.length; i++) {
         if (shExpMatch(url, urls[i])) return proxy;
-    }
-    for (i=0; i < hosts.length; i++) {
-        if (dnsDomainIs(host, hosts[i])) return proxy;
     }
     return 'DIRECT';
 }

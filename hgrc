@@ -2,7 +2,7 @@
 username=Hsiaoming Young <me@lepture.com>
 editor=vim
 verbose=True
-ignore=$HOME/.hgignore_global
+#ignore=$HOME/.hgignore_global
 [extensions]
 prompt=$HOME/.config/hg-prompt.py
 

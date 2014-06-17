@@ -16,13 +16,14 @@ Bundle "lepture/vim-css"
 Bundle "lepture/vim-jinja"
 "Bundle "goldfeld/vim-seek"
 Bundle "scrooloose/syntastic"
-Bundle "mattn/zencoding-vim"
+Bundle "mattn/emmet-vim"
 "Bundle "shemerey/vim-peepopen"
-"Bundle "msanders/snipmate.vim"
+Bundle "msanders/snipmate.vim"
 Bundle "altercation/vim-colors-solarized"
 Bundle "Lokaltog/vim-powerline"
-"Bundle "jnwhiteh/vim-golang"
+Bundle "jnwhiteh/vim-golang"
 Bundle 'airblade/vim-gitgutter'
+Bundle 'wting/rust.vim'
 
 set backspace=indent,eol,start
 set nobackup
@@ -90,7 +91,7 @@ let NERDTreeChDirMode=2
 "let NERDTreeHijackNetrw=0
 "let g:netrw_altv=1
 "let g:netrw_browse_split=4
-let g:html_indent_inctags = "html,body,head,tbody"
+let g:html_indent_inctags = "body,head,tbody"
 let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
 "set noswapfile
@@ -129,6 +130,8 @@ autocmd FileType html setlocal sw=2 ts=2
 autocmd FileType jinja setlocal sw=2 ts=2
 autocmd FileType yaml setlocal sw=2 ts=2
 au BufRead,BufNewFile *.vm set ft=html fileencoding=gbk syntax=velocity
+au BufRead,BufNewFile *.md set ft=markdown
+au BufRead,BufNewFile *.styl set ft=css
 
 "map keys
 let mapleader = ","

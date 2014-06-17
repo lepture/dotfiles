@@ -1,5 +1,5 @@
 # Common
-build
+build/
 # Test DB
 *.sqlite
 # Test
@@ -71,3 +71,5 @@ DerivedData
 
 # Idea
 .idea/
+.vagrant/
+venv/

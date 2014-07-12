@@ -1,4 +1,5 @@
 {
+  "esnext": true,
   "eqeqeq": true,
   "forin": false,
   "latedef": false,

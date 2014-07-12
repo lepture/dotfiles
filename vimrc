@@ -2,28 +2,26 @@
 set nocompatible
 filetype off
 set shell=/bin/bash
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
 
 "Github bundles
-"Bundle "tpope/vim-markdown"
-"Bundle "scrooloose/nerdcommenter"
-"Bundle "tpope/vim-surround"
-Bundle "pangloss/vim-javascript"
-"Bundle "lepture/vim-velocity"
-Bundle "lepture/vim-css"
-Bundle "lepture/vim-jinja"
-"Bundle "goldfeld/vim-seek"
-Bundle "scrooloose/syntastic"
-Bundle "mattn/emmet-vim"
-"Bundle "shemerey/vim-peepopen"
-Bundle "msanders/snipmate.vim"
-Bundle "altercation/vim-colors-solarized"
-Bundle "Lokaltog/vim-powerline"
-Bundle "jnwhiteh/vim-golang"
-Bundle 'airblade/vim-gitgutter'
-Bundle 'wting/rust.vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'lepture/vim-css'
+Plugin 'lepture/vim-jinja'
+Plugin 'scrooloose/syntastic'
+Plugin 'mattn/emmet-vim'
+Plugin 'msanders/snipmate.vim'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'Lokaltog/vim-powerline'
+"Plugin 'fatih/vim-go'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'wting/rust.vim'
+
+call vundle#end()
+"filetype plugin on
+filetype plugin indent on
 
 set backspace=indent,eol,start
 set nobackup
@@ -117,8 +115,6 @@ nmap <tab> :NERDTreeToggle<cr>
 syntax on
 
 
-"filetype plugin on
-filetype plugin indent on
 au BufRead,BufNewFile *.less set ft=css
 autocmd FileType text setlocal textwidth=80
 autocmd FileType python setlocal textwidth=79 shiftwidth=4

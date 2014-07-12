@@ -28,8 +28,8 @@ if [ ! -d $HOME/.config ]; then
 fi
 
 echo "init vim ...."
-if [ ! -d vim/bundle/vundle ]; then
-    git clone https://github.com/gmarik/vundle.git vim/bundle/vundle
+if [ ! -d vim/bundle/Vundle.vim ]; then
+    git clone https://github.com/gmarik/Vundle.vim.git vim/bundle/Vundle.vim
 fi
 link vim
 link vimrc

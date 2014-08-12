@@ -49,21 +49,8 @@ link_config fish
 
 echo "init python env ..."
 link_config pystartup.py
-if which pip > /dev/null; then
-    echo "pip already installed"
-else
-    sudo easy_install pip
-fi
-if which virtualenv > /dev/null; then
-    echo "virtualenv already installed"
-else
-    sudo pip install virtualenv
-    sudo pip install fabric
-fi
-if [ ! -d $HOME/.venvs ]; then
-    echo "create virualenv directory"
-    mkdir "$HOME/.venvs"
-fi
+echo "install pyenv and pyenv-virtualenv yourself"
+
 if [ ! -d $HOME/workspace ]; then
     echo "create workspace"
     mkdir "$HOME/workspace"

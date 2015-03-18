@@ -14,6 +14,7 @@ for (var i = 0; i < images.length; i++) {
   (function(input) {
     var img = document.createElement('img');
     img.src = input.getAttribute('src');
+    img.style.maxWidth = '100%';
     input.parentNode.replaceChild(img, input);
   })(images[i]);
 }

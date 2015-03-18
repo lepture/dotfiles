@@ -7,7 +7,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 "Github bundles
-Plugin 'pangloss/vim-javascript'
+Plugin 'lepture/vim-javascript'
 Plugin 'lepture/vim-css'
 Plugin 'lepture/vim-jinja'
 Plugin 'scrooloose/syntastic'
@@ -15,9 +15,10 @@ Plugin 'mattn/emmet-vim'
 Plugin 'msanders/snipmate.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'Lokaltog/vim-powerline'
-"Plugin 'fatih/vim-go'
+Plugin 'jnwhiteh/vim-golang'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'wting/rust.vim'
+Plugin 'cespare/vim-toml'
 
 call vundle#end()
 "filetype plugin on
@@ -97,8 +98,10 @@ let g:html_indent_style1 = "inc"
 
 " syntastic configuration
 let g:syntastic_check_on_open=1
+let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_python_checker_args = "--ignore=E127"
-let g:syntastic_javascript_jshint_conf = $HOME . "/.vim/conf/jshintrc"
+let g:syntastic_javascript_jshint_args = "--config ".$HOME."/.vim/conf/jshintrc"
+let g:syntastic_javascript_checkers = ['jshint']
 let loaded_html_syntax_checker = 0
 
 
@@ -125,9 +128,8 @@ autocmd FileType javascript setlocal smartindent ts=2 sw=2
 autocmd FileType html setlocal sw=2 ts=2
 autocmd FileType jinja setlocal sw=2 ts=2
 autocmd FileType yaml setlocal sw=2 ts=2
-au BufRead,BufNewFile *.vm set ft=html fileencoding=gbk syntax=velocity
+autocmd FileType go setlocal noexpandtab
 au BufRead,BufNewFile *.md set ft=markdown
-au BufRead,BufNewFile *.styl set ft=css
 
 "map keys
 let mapleader = ","
@@ -136,6 +138,8 @@ inoremap <C-U> <C-G>u<C-U>
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 nnoremap ; :
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+vmap <C-c> y:call system("pbcopy", getreg("\""))<CR>
+nmap <C-v> :call setreg("\"",system("pbpaste"))<CR>p
 
 set background=dark
 let g:solarized_visibility='low'

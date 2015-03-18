@@ -14,7 +14,7 @@ patch:
         - "汉字"
         - "漢字"
 
-  simplifier/opencc_config: zhs2zht.ini
+  simplifier/opencc_config: zhs2zhtw_vp.ini
 
   engine/filters:
       - simplifier

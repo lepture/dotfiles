@@ -15,10 +15,11 @@ Plugin 'mattn/emmet-vim'
 Plugin 'msanders/snipmate.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'Lokaltog/vim-powerline'
-Plugin 'jnwhiteh/vim-golang'
+Plugin 'fatih/vim-go'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'wting/rust.vim'
 Plugin 'cespare/vim-toml'
+Plugin 'guns/vim-clojure-static'
 
 call vundle#end()
 "filetype plugin on
@@ -120,7 +121,7 @@ syntax on
 
 au BufRead,BufNewFile *.less set ft=css
 autocmd FileType text setlocal textwidth=80
-autocmd FileType python setlocal textwidth=79 shiftwidth=4
+autocmd FileType python setlocal textwidth=86 shiftwidth=4
 autocmd FileType vim setlocal shiftwidth=2 tabstop=2
 autocmd FileType css setlocal shiftwidth=2 tabstop=2
 autocmd FileType ruby setlocal shiftwidth=2 tabstop=2

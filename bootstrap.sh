@@ -59,26 +59,6 @@ fi
 echo "init nodejs"
 if [ ! -d $HOME/.config/bin/n ]; then
     mkdir -p $HOME/.config/bin
-    curl https://raw.github.com/visionmedia/n/master/bin/n -o $HOME/.config/bin/n
+    curl https://raw.githubusercontent.com/tj/n/master/bin/n -o $HOME/.config/bin/n
     chmod +x $HOME/.config/bin/n
-fi
-
-# rime input method
-link_rime() {
-    rm "$HOME/Library/Rime/$1"
-    ln -s "`pwd`/rime/$1" "$HOME/Library/Rime/$1"
-}
-echo "init rime"
-link_rime default.custom.yaml
-link_rime squirrel.custom.yaml
-link_rime wubi_pinyin.custom.yaml
-link_rime wubi86.custom.yaml
-# link_rime opencc/zhs2zht.ini
-# download ocd files
-
-OPENCC="/Library/Input Methods/Squirrel.app/Contents/SharedSupport/opencc"
-if [ ! -f "$OPENCC/simp_to_trad_phrases.ocd" ]; then
-    baseurl=https://rimeime.googlecode.com/svn/trunk/misc/opencc/data
-    curl ${baseurl}/simp_to_trad_phrases.ocd -o "$OPENCC/simp_to_trad_phrases.ocd"
-    curl ${baseurl}/simp_to_trad_characters.ocd -o "$OPENCC/simp_to_trad_characters.ocd"
 fi

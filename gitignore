@@ -73,3 +73,5 @@ DerivedData
 .idea/
 .vagrant/
 venv/
+
+*.sublime-workspace

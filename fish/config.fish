@@ -2,13 +2,16 @@ set -x LANG "en_US.UTF-8"
 set -x LC_ALL "en_US.UTF-8"
 set -x COPYFILE_DISABLE "true"
 
-set -x PATH $HOME/.config/bin /usr/local/bin $PATH
+set -x PATH $HOME/.config/bin /usr/local/bin /usr/local/sbin $PATH
 
 # pyenv
 set -x PYTHON_BUILD_SKIP_MIRROR "1"
 status --is-interactive; and . (pyenv init -|psub)
 . (pyenv virtualenv-init -|psub)
 set -x PYTHONSTARTUP $HOME/.config/pystartup.py
+
+# rbenv
+status --is-interactive; and source (rbenv init -|psub)
 
 # nodejs
 set -x NODE_PATH /usr/local/lib/node_modules

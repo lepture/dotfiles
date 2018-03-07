@@ -7,7 +7,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 "Github bundles
-Plugin 'lepture/vim-javascript'
+" Plugin 'lepture/vim-javascript'
 " Plugin 'lepture/vim-css'
 " Plugin 'lepture/vim-jinja'
 Plugin 'scrooloose/syntastic'

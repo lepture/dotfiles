@@ -72,3 +72,4 @@ DerivedData
 venv/
 
 *.sublime-workspace
+.pytest_cache/

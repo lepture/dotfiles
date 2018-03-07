@@ -1,6 +1,7 @@
 [user]
     name = Hsiaoming Yang
     email = me@lepture.com
+    signingkey = 7E55E3E0118B2B4C
 
 [core]
     editor = vim
@@ -18,7 +19,7 @@
 
 [alias]
     st = status -sb
-    ci = commit -a
+    ci = commit -S -a
     br = branch
     df = diff
     co = checkout
@@ -35,8 +36,3 @@
     ui = true
 [push]
     default = simple
-[filter "lfs"]
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
